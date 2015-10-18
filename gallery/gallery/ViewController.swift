@@ -7,11 +7,23 @@
 //
 
 import UIKit
+import Alamofire
+import MBProgressHUD
+import hpple
+import AlamofireImage
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let urlStr = "http://www.douban.com/group/topic/80403549/"
+        
+        
+        self.navigationController?.pushViewController(ImageSpider.init(aUrl: urlStr), animated: true)
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

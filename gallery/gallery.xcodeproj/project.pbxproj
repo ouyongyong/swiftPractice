@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842EA1D42A093603435EBCC4 /* Pods_gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35683A51EC36DB310BFC6909 /* Pods_gallery.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8C1C636F1BD35B7400E158F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C636E1BD35B7400E158F2 /* AppDelegate.swift */; };
 		8C1C63711BD35B7400E158F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C63701BD35B7400E158F2 /* ViewController.swift */; };
 		8C1C63741BD35B7400E158F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C63721BD35B7400E158F2 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		8C1C63791BD35B7400E158F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C63771BD35B7400E158F2 /* LaunchScreen.storyboard */; };
 		8C1C63841BD35B7400E158F2 /* galleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C63831BD35B7400E158F2 /* galleryTests.swift */; };
 		8C1C638F1BD35B7400E158F2 /* galleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C638E1BD35B7400E158F2 /* galleryUITests.swift */; };
+		8C4BF8081BD3D65E00AC72C9 /* ImageSpider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BF8071BD3D65E00AC72C9 /* ImageSpider.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35683A51EC36DB310BFC6909 /* Pods_gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		808379B4CE743E4D3485595D /* Pods-gallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gallery.release.xcconfig"; path = "Pods/Target Support Files/Pods-gallery/Pods-gallery.release.xcconfig"; sourceTree = "<group>"; };
 		8C1C636B1BD35B7400E158F2 /* gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1C636E1BD35B7400E158F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C1C63701BD35B7400E158F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,9 @@
 		8C1C638A1BD35B7400E158F2 /* galleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1C638E1BD35B7400E158F2 /* galleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galleryUITests.swift; sourceTree = "<group>"; };
 		8C1C63901BD35B7400E158F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C4BF8061BD3985600AC72C9 /* OC-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OC-Bridge.h"; sourceTree = "<group>"; };
+		8C4BF8071BD3D65E00AC72C9 /* ImageSpider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSpider.swift; sourceTree = "<group>"; };
+		DCAAC7F0275D0A047D1B5568 /* Pods-gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gallery/Pods-gallery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842EA1D42A093603435EBCC4 /* Pods_gallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46655BBD3343D47D5472B4BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCAAC7F0275D0A047D1B5568 /* Pods-gallery.debug.xcconfig */,
+				808379B4CE743E4D3485595D /* Pods-gallery.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8C1C63621BD35B7300E158F2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +98,8 @@
 				8C1C63821BD35B7400E158F2 /* galleryTests */,
 				8C1C638D1BD35B7400E158F2 /* galleryUITests */,
 				8C1C636C1BD35B7400E158F2 /* Products */,
+				46655BBD3343D47D5472B4BF /* Pods */,
+				C248FB01613408EF142F3BDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +118,12 @@
 			children = (
 				8C1C636E1BD35B7400E158F2 /* AppDelegate.swift */,
 				8C1C63701BD35B7400E158F2 /* ViewController.swift */,
+				8C4BF8071BD3D65E00AC72C9 /* ImageSpider.swift */,
 				8C1C63721BD35B7400E158F2 /* Main.storyboard */,
 				8C1C63751BD35B7400E158F2 /* Assets.xcassets */,
 				8C1C63771BD35B7400E158F2 /* LaunchScreen.storyboard */,
 				8C1C637A1BD35B7400E158F2 /* Info.plist */,
+				8C4BF8061BD3985600AC72C9 /* OC-Bridge.h */,
 			);
 			path = gallery;
 			sourceTree = "<group>";
@@ -125,6 +146,14 @@
 			path = galleryUITests;
 			sourceTree = "<group>";
 		};
+		C248FB01613408EF142F3BDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35683A51EC36DB310BFC6909 /* Pods_gallery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C1C63931BD35B7400E158F2 /* Build configuration list for PBXNativeTarget "gallery" */;
 			buildPhases = (
+				1BB00FA7E14F3E10BDC58E3E /* Check Pods Manifest.lock */,
 				8C1C63671BD35B7400E158F2 /* Sources */,
 				8C1C63681BD35B7400E158F2 /* Frameworks */,
 				8C1C63691BD35B7400E158F2 /* Resources */,
+				A736BB0B3E7EA17027DBB675 /* Copy Pods Resources */,
+				0A0130A1AB47A8488380800D /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,12 +282,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A0130A1AB47A8488380800D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gallery/Pods-gallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BB00FA7E14F3E10BDC58E3E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A736BB0B3E7EA17027DBB675 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gallery/Pods-gallery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8C1C63671BD35B7400E158F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8C1C63711BD35B7400E158F2 /* ViewController.swift in Sources */,
+				8C4BF8081BD3D65E00AC72C9 /* ImageSpider.swift in Sources */,
 				8C1C636F1BD35B7400E158F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +432,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "gallery/OC-Bridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,6 +471,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "gallery/OC-Bridge.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -396,6 +479,7 @@
 		};
 		8C1C63941BD35B7400E158F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCAAC7F0275D0A047D1B5568 /* Pods-gallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = gallery/Info.plist;
@@ -407,6 +491,7 @@
 		};
 		8C1C63951BD35B7400E158F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 808379B4CE743E4D3485595D /* Pods-gallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = gallery/Info.plist;
@@ -483,6 +568,7 @@
 				8C1C63951BD35B7400E158F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C1C63961BD35B7400E158F2 /* Build configuration list for PBXNativeTarget "galleryTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +577,7 @@
 				8C1C63981BD35B7400E158F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C1C63991BD35B7400E158F2 /* Build configuration list for PBXNativeTarget "galleryUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +586,7 @@
 				8C1C639B1BD35B7400E158F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

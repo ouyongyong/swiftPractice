@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (3.0.0)
+  - AlamofireImage (2.0.0):
+    - Alamofire (~> 3.0)
+  - hpple (0.2.0)
+  - MBProgressHUD (0.9.1)
+  - ObjectiveGumbo (0.1)
+  - pop (1.0.8)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0.0)
+  - AlamofireImage (~> 2.0.0)
+  - hpple (~> 0.2.0)
+  - MBProgressHUD (>= 0.9.1)
+  - ObjectiveGumbo (~> 0.1)
+  - pop (~> 1.0.8)
+
+SPEC CHECKSUMS:
+  Alamofire: b61782387f81bcc538a0284cf2bb5d7995cd0a80
+  AlamofireImage: 5cecda9b1031f86067c89ddba1d91ead0a8c3f0e
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  ObjectiveGumbo: 0704c4930688132abb3d5df2000334f30504856f
+  pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
+
+COCOAPODS: 0.38.2
