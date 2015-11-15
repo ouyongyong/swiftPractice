@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlStr = "http://www.douban.com/group/topic/80403549/"
+        let urlStr = "http://www.douban.com/group/godgoddess/discussion?start=1"
         
         
         self.navigationController?.pushViewController(ImageSpider.init(aUrl: urlStr), animated: true)

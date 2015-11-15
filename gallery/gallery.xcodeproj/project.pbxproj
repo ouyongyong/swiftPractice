@@ -15,7 +15,8 @@
 		8C1C63791BD35B7400E158F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C63771BD35B7400E158F2 /* LaunchScreen.storyboard */; };
 		8C1C63841BD35B7400E158F2 /* galleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C63831BD35B7400E158F2 /* galleryTests.swift */; };
 		8C1C638F1BD35B7400E158F2 /* galleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1C638E1BD35B7400E158F2 /* galleryUITests.swift */; };
-		8C4BF8081BD3D65E00AC72C9 /* ImageSpider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BF8071BD3D65E00AC72C9 /* ImageSpider.swift */; settings = {ASSET_TAGS = (); }; };
+		8C1E517B1BF71DEA000B8760 /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1E517A1BF71DEA000B8760 /* SwipeView.swift */; };
+		8C4BF8081BD3D65E00AC72C9 /* ImageSpider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4BF8071BD3D65E00AC72C9 /* ImageSpider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8C1C638A1BD35B7400E158F2 /* galleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = galleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1C638E1BD35B7400E158F2 /* galleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = galleryUITests.swift; sourceTree = "<group>"; };
 		8C1C63901BD35B7400E158F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1E517A1BF71DEA000B8760 /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		8C4BF8061BD3985600AC72C9 /* OC-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OC-Bridge.h"; sourceTree = "<group>"; };
 		8C4BF8071BD3D65E00AC72C9 /* ImageSpider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSpider.swift; sourceTree = "<group>"; };
 		DCAAC7F0275D0A047D1B5568 /* Pods-gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gallery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gallery/Pods-gallery.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				8C1C636E1BD35B7400E158F2 /* AppDelegate.swift */,
 				8C1C63701BD35B7400E158F2 /* ViewController.swift */,
 				8C4BF8071BD3D65E00AC72C9 /* ImageSpider.swift */,
+				8C1E517A1BF71DEA000B8760 /* SwipeView.swift */,
 				8C1C63721BD35B7400E158F2 /* Main.storyboard */,
 				8C1C63751BD35B7400E158F2 /* Assets.xcassets */,
 				8C1C63771BD35B7400E158F2 /* LaunchScreen.storyboard */,
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C1C63711BD35B7400E158F2 /* ViewController.swift in Sources */,
+				8C1E517B1BF71DEA000B8760 /* SwipeView.swift in Sources */,
 				8C4BF8081BD3D65E00AC72C9 /* ImageSpider.swift in Sources */,
 				8C1C636F1BD35B7400E158F2 /* AppDelegate.swift in Sources */,
 			);
