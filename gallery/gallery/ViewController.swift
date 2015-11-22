@@ -19,8 +19,12 @@ class ViewController: UIViewController {
         
         let urlStr = "http://www.douban.com/group/godgoddess/discussion?start=1"
         
+        let imgSpider = ImageSpider(aUrl: urlStr)
         
-        self.navigationController?.pushViewController(ImageSpider.init(aUrl: urlStr), animated: true)
+        imgSpider.view.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)
+        imgSpider.view.center = self.view.center
+        
+        self.view.addSubview(imgSpider.view)
         
         
         
