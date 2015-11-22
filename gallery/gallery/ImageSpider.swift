@@ -47,23 +47,25 @@ class ImageSpider: UIViewController, SwipeViewDelegate {
                 
                 if let aUrl:String = aNode.attributes["src"] as! String? {
                     print(aUrl)
-                    let imgView:UIImageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width-40.0, self.view.frame.size.height-40.0))
+                    let imgView:UIImageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width-40.0 - CGFloat(i*10), self.view.frame.size.height-40.0 - CGFloat(i*10)))
                     imgView.contentMode = UIViewContentMode.ScaleAspectFit
-                    imgView.af_setImageWithURL(NSURL(string: aUrl)!)
                     
-                    let swipeView = SwipeView(frame: CGRectMake(CGFloat(i*5), CGFloat(i*5), self.view.frame.size.width-40.0, self.view.frame.size.height-40.0), otherView: imgView)
+                    
+                    let swipeView = SwipeView(frame: CGRectMake(CGFloat(i*5), CGFloat(i*10), self.view.frame.size.width-40.0 - CGFloat(i*10), self.view.frame.size.height-40.0 - CGFloat(i*5)), otherView: imgView)
                     swipeView.swipeDelegate = self;
                     swipeView.tag = 999+i
                     if self.cards.count == 0 {
                         print("add \(aUrl) in \(i)")
                         self.view.addSubview(swipeView)
                     } else {
-                        print("insert \(aUrl) in \(i)")
+                        print("insert \(aUrl) in \(i), with frame \(swipeView.frame)")
                         self.view.insertSubview(swipeView, belowSubview: self.cards.last!)
                         self.view.sendSubviewToBack(swipeView)
                     }
                     
                     self.cards.append(swipeView)
+                    
+                    imgView.af_setImageWithURL(NSURL(string: aUrl)!)
 
                 }
             }
@@ -81,8 +83,8 @@ class ImageSpider: UIViewController, SwipeViewDelegate {
             if subView.isKindOfClass(SwipeView) {
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     var frame = subView.frame
-                    frame.origin.x -= 5
                     frame.origin.y -= 5
+                    frame.size.width += 10;
                     subView.frame = frame
                     
                     }, completion: { (complete) -> Void in
@@ -99,8 +101,8 @@ class ImageSpider: UIViewController, SwipeViewDelegate {
             if subView.isKindOfClass(SwipeView) {
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     var frame = subView.frame
-                    frame.origin.x -= 5
                     frame.origin.y -= 5
+                    frame.size.width += 10;
                     subView.frame = frame
                     
                     }, completion: { (complete) -> Void in

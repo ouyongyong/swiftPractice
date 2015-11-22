@@ -34,11 +34,14 @@ class SwipeView: UIView {
     
     //init
     init(frame: CGRect, otherView: UIView) {
-//        self.contentView = otherView
+        self.contentView = otherView
         super.init(frame: frame)
         self.setupView()
         self.initGesture()
         self.addSubview(otherView)
+        
+        self.contentView!.autoresizesSubviews = true;
+        self.contentView!.autoresizingMask = [.FlexibleTopMargin, .FlexibleBottomMargin, .FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleHeight, .FlexibleWidth]
         
     }
 
@@ -63,6 +66,7 @@ class SwipeView: UIView {
         self.layer.shadowOpacity = 0.2
         self.layer.shadowOffset = CGSizeMake(1, 1)
         self.backgroundColor = UIColor.whiteColor()
+      
     }
     
     func initGesture() {
