@@ -7,12 +7,36 @@
 //
 
 import UIKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 
 
 protocol SwipeViewDelegate {
-    func swipeViewDidSwipeLeft(view : UIView)
-    func swipeViewDidSwipeRight(view : UIView)
+    func swipeViewDidSwipeLeft(_ view : UIView)
+    func swipeViewDidSwipeRight(_ view : UIView)
 }
 
 class SwipeView: UIView {
@@ -29,8 +53,8 @@ class SwipeView: UIView {
     var panGestureRecognizer : UIPanGestureRecognizer!
     var orgPoint : CGPoint!
     var contentView : UIView?
-    private var xOff : CGFloat!
-    private var yOff : CGFloat!
+    fileprivate var xOff : CGFloat!
+    fileprivate var yOff : CGFloat!
     
     //init
     init(frame: CGRect, otherView: UIView) {
@@ -41,7 +65,7 @@ class SwipeView: UIView {
         self.addSubview(otherView)
         
         self.contentView!.autoresizesSubviews = true;
-        self.contentView!.autoresizingMask = [.FlexibleTopMargin, .FlexibleBottomMargin, .FlexibleLeftMargin, .FlexibleRightMargin, .FlexibleHeight, .FlexibleWidth]
+        self.contentView!.autoresizingMask = [.flexibleTopMargin, .flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleHeight, .flexibleWidth]
         
     }
 
@@ -51,12 +75,12 @@ class SwipeView: UIView {
     
     //methods
     func swipeLeft() {
-        self.swipeTo(CGPointMake(-600, self.center.y), rotate: -1)
+        self.swipeTo(CGPoint(x: -600, y: self.center.y), rotate: -1)
         self.swipeDelegate?.swipeViewDidSwipeLeft(self)
     }
 
     func swipeRight() {
-        self.swipeTo(CGPointMake(600, self.center.y), rotate: 1)
+        self.swipeTo(CGPoint(x: 600, y: self.center.y), rotate: 1)
         self.swipeDelegate?.swipeViewDidSwipeRight(self)
     }
     
@@ -64,36 +88,36 @@ class SwipeView: UIView {
         self.layer.cornerRadius = 4
         self.layer.shadowRadius = 3
         self.layer.shadowOpacity = 0.2
-        self.layer.shadowOffset = CGSizeMake(1, 1)
-        self.backgroundColor = UIColor.whiteColor()
+        self.layer.shadowOffset = CGSize(width: 1, height: 1)
+        self.backgroundColor = UIColor.white
       
     }
     
     func initGesture() {
-        self.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "panStart:")
+        self.panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(SwipeView.panStart(_:)))
         self.addGestureRecognizer(self.panGestureRecognizer)
         
     }
     
-    func panStart(sender : UIPanGestureRecognizer) {
-        xOff = sender.translationInView(self).x
-        yOff = sender.translationInView(self).y
+    func panStart(_ sender : UIPanGestureRecognizer) {
+        xOff = sender.translation(in: self).x
+        yOff = sender.translation(in: self).y
         
         switch (sender.state) {
-        case UIGestureRecognizerState.Began:
+        case UIGestureRecognizerState.began:
             self.orgPoint = self.center
-        case UIGestureRecognizerState.Changed:
+        case UIGestureRecognizerState.changed:
             let roteStrenght = Double(min(xOff!/rotationStrength, rotationMax))
             let angle = rotationAngle * roteStrenght
             let scale = max(1-fabsf(Float(roteStrenght))/scaleStrength, scaleMax)
             
-            self.center = CGPointMake(self.orgPoint.x + xOff, self.orgPoint.y + yOff)
+            self.center = CGPoint(x: self.orgPoint.x + xOff, y: self.orgPoint.y + yOff)
             
-            let transform = CGAffineTransformMakeRotation(CGFloat(angle))
-            let scaleTrans = CGAffineTransformScale(transform, CGFloat(scale), CGFloat(scale))
+            let transform = CGAffineTransform(rotationAngle: CGFloat(angle))
+            let scaleTrans = transform.scaledBy(x: CGFloat(scale), y: CGFloat(scale))
             
             self.transform = scaleTrans
-        case UIGestureRecognizerState.Ended:
+        case UIGestureRecognizerState.ended:
             self.swipeEnd()
         default: break
             //do nothing
@@ -107,9 +131,9 @@ class SwipeView: UIView {
             self.goesRight()
         case -actionMargin...actionMargin :
             //middle
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            UIView.animate(withDuration: 0.3, animations: { () -> Void in
                 self.center = self.orgPoint
-                self.transform = CGAffineTransformMakeRotation(0)
+                self.transform = CGAffineTransform(rotationAngle: 0)
                 }, completion: { (complete) -> Void in
 //                    self.removeFromSuperview()
             })
@@ -120,22 +144,22 @@ class SwipeView: UIView {
     }
     
     func goesRight() {
-        self.swipeTo(CGPointMake(500, 2*yOff + self.orgPoint.y), rotate : 0)
+        self.swipeTo(CGPoint(x: 500, y: 2*yOff + self.orgPoint.y), rotate : 0)
         self.swipeDelegate?.swipeViewDidSwipeRight(self)
     }
     
     func goesLeft() {
-        self.swipeTo(CGPointMake(-500, 2*yOff + self.orgPoint.y), rotate: 0)
+        self.swipeTo(CGPoint(x: -500, y: 2*yOff + self.orgPoint.y), rotate: 0)
         self.swipeDelegate?.swipeViewDidSwipeLeft(self)
     }
     
-    func swipeTo(finishPoint : CGPoint, rotate : CGFloat) {
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
+    func swipeTo(_ finishPoint : CGPoint, rotate : CGFloat) {
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
             self.center = finishPoint
-            self.transform = CGAffineTransformMakeRotation(rotate)
-            }) { (complete) -> Void in
+            self.transform = CGAffineTransform(rotationAngle: rotate)
+            }, completion: { (complete) -> Void in
                 self.removeFromSuperview()
-        }
+        }) 
     }
     
 

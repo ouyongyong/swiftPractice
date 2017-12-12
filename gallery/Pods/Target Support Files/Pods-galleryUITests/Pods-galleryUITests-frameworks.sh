@@ -82,16 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ObjectiveGumbo/ObjectiveGumbo.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/hpple/hpple.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/MBProgressHUD/MBProgressHUD.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ObjectiveGumbo/ObjectiveGumbo.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/hpple/hpple.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/pop/pop.framework"
-fi

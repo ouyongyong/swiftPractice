@@ -1,4 +1,6 @@
+#ifdef __OBJC__
 #import <UIKit/UIKit.h>
+#endif
 
 #import "attribute.h"
 #import "char_ref.h"
@@ -8,9 +10,9 @@
 #import "parser.h"
 #import "string_buffer.h"
 #import "string_piece.h"
-#import "token_type.h"
 #import "tokenizer.h"
 #import "tokenizer_states.h"
+#import "token_type.h"
 #import "utf8.h"
 #import "util.h"
 #import "vector.h"

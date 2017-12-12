@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AlamofireImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +15,16 @@
 			<false/>
 		</dict>
 		<key>Pods-gallery.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-galleryTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-galleryUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1532C10678F29DD437DFA8242248216F</key>
+		<key>3C7AFCE3258BC1D59D5A375DDB10FABC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2784B104B40C3F8DB030DF461EE4B581</key>
+		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3DA374BB5346C86BB9E37D7D8A3F9705</key>
+		<key>6170FE343FD4DD4471ADC2406FF33AB1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64C75F30950A5371FD79653D1643E80C</key>
+		<key>7150282C338AA2F2AA694C33338CE078</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9D1E14B709C2F1EB37397FEDEAA60330</key>
+		<key>A4DDC89A3D5D8167ACDBE1ED656DED5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D635F027F0A6FD04B98B790907265430</key>
+		<key>BB7AD85D68BE61862F43CDA0C51C3737</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDEBD98F4445DC0A8877B5BB89C49AAE</key>
+		<key>BF3538CF35126AEE598F0DE2880C6B3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,23 +7,22 @@
 //
 
 import UIKit
-import Alamofire
 import MBProgressHUD
 import hpple
-import AlamofireImage
+//import AlamofireImage
 
 class ViewController: UIViewController, ImageSpiderDelegate {
     
-    private var imgSpider : ImageSpider?
+    fileprivate var imgSpider : ImageSpider?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let urlStr = "http://www.douban.com/group/godgoddess/discussion?start=1"
         
-        imgSpider = ImageSpider(aUrl: NSURL(string: urlStr)!)
+        imgSpider = ImageSpider(aUrl: URL(string: urlStr)!)
         
-        imgSpider!.view.frame = CGRectMake(self.view.frame.size.width/4, self.view.frame.size.height/4, self.view.frame.size.width/2, self.view.frame.size.height/2)
+        imgSpider!.view.frame = CGRect(x: self.view.frame.size.width/4, y: self.view.frame.size.height/4, width: self.view.frame.size.width/2, height: self.view.frame.size.height/2)
         imgSpider!.view.center = self.view.center
         imgSpider!.delegate = self
         
@@ -39,10 +38,10 @@ class ViewController: UIViewController, ImageSpiderDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func imageCountDidChange(count : Int) {
+    func imageCountDidChange(_ count : Int) {
         if count < 3 {
             let urlStr = "http://www.douban.com/group/godgoddess/discussion?start=2"
-            imgSpider?.appendImgs(NSURL(string: urlStr)!)
+            imgSpider?.appendImgs(URL(string: urlStr)!)
         }
     }
     
